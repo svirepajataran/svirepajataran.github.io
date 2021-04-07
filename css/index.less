@@ -18,6 +18,14 @@ a {
     text-decoration: none;
 }
 
+.btn() {
+    background: #8DD83D;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    font-family: HelveticaNeue;
+}
+
 /*HEADER*/
 
 header {
@@ -91,13 +99,14 @@ header {
         /*@Make Animation*/
         &_mask {
             height: 100%;
-            background: rgba(0,0,0, 0.6);
+            background: rgba(0,0,0, 0.6); //0,0,0,0.6 or 255,255,255,0.1
             display: flex;
             align-items: center;
             justify-content: flex-end;
         }
         height: 100%;
         background: url('../img/CoD-WWII.png') no-repeat center / cover;
+        background-attachment: fixed;
         .main {
             width: 27.8%;
             min-width: 390px;
@@ -112,12 +121,8 @@ header {
             p { font-size: 16px; margin-bottom: 25px;}
             .buttons {
                 button {
-                    background: #8DD83D;
-                    border-radius: 4px;
-                    border: none;
+                    .btn();
                     padding: 9px 29px;
-                    color: white;
-                    font-family: HelveticaNeue;
                     &:last-of-type {
                         margin-left: 13px;
                     }
@@ -127,6 +132,55 @@ header {
     }
 }
 
-.card() {
-    
+//SECOND BLOCK
+
+.callOfDuty {
+    max-width: 46.4%;
+    min-width: 650px;
+    margin: 100px auto;
+    h2, p {
+        font-family: HelveticaNeue;
+    }
+    h2 {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 36px;
+        color: #435766;
+    }
+    p {
+        font-size: 21px;
+        color: #435766;
+        text-align: center;
+        margin: 37px 0 53px 0;
+    }
+    .buttons {
+        max-width: 67%;
+        margin: auto;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        button {
+            height: 52px;
+            .btn();
+            transition: all 0.7s;
+            &.order {
+                width: 170px;
+                &:hover {
+                    border-radius: 10px;
+                    //background: linear-gradient(180deg, #686C6F 0%, #373A3C 100%);
+                    background: #000;
+                }
+            }
+            &.technical {
+                width: 235px;
+                background: linear-gradient(180deg, #686C6F 0%, #373A3C 100%);
+                &:hover {
+                    border-radius: 10px;
+                    background: #000;
+                }
+            }
+            font-size: 18px;
+        }
+    }
 }
